@@ -1,13 +1,382 @@
-body {
+
+  @import url('https://fonts.googleapis.com/css2?family=Telex&display=swap');
+
+
+*{
   margin: 0;
+  padding: 0;
+}
+body {
+  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0a192f;
+}
+.nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color:#0a192fed ;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar{
+  background-color: transparent;
+  color: #64ffda;
+  width: 80%;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
 }
+.icon{
+  width: 50px;
+  background-color: transparent;
+  transition: transform .8s ease-in-out;
+  cursor: pointer;
+}
+.icon:hover {
+  transform: rotate(360deg);
+}
+.lists{
+  display: flex;
+  text-transform: capitalize;
+  gap: 20px;
+  align-items: center;
+  font-size: 18px;
+}
+.list{
+  cursor: pointer;
+}
+.list:hover{
+  border-bottom:2px solid;   
+}
+
+.lists button{
+  width: 90px;
+  height: 35px;
+  color: #64ffda;
+  background-color: transparent;
+  font-weight:bold;
+  border: 2px solid;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lists button:hover{
+  color:  #0a192f;
+  background-color: #64ffda;
+  border: 2px solid #64ffda;
+  transition: 0.5s;
+}
+.main{
+  display: flex;
+  width: 70%;
+  margin: auto;
+  height: 100vh;
+}
+.Home{
+  
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.my{
+  color: #64ffda;
+  font-size: 18px;
+}
+.name.name h1:first-child{
+  color: #ccd6f6;
+  font-size: 4.3rem;
+}
+.name h1:last-child{
+  color: #8892b0;
+  font-size: 4.3rem;
+}
+.paragraph{
+  width: 50%;
+  color:#727d9a;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.8rem;
+}
+.btn_hi{
+  margin-top: 50px;
+}
+.email-link,.btn button{
+  margin-top: 40px;
+  padding: 8px 20px;
+  color: #64ffda;
+  background-color: transparent;
+  font-weight:bold;
+  font-size: 22px;
+  border: 2px solid;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.email-link:hover{
+  color:  #0a192f;
+  background-color: #64ffda;
+  border: 2px solid #64ffda;
+  transition: 0.5s;
+}
+.about{
+  width: 65%;
+  margin: auto;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}  
+.about h1,.projects h1{
+  color: #ccd6f6;
+}
+.about p{
+  color: #7b85a2;
+}
+.pic_frame{
+  border-right: 2px solid  #ccd6f6;
+  border-bottom: 2px solid  #ccd6f6;
+  padding:0 18px 18px 0;
+  border-radius: 10px;
+}
+
+.pic_frame img{
+  width: 300px;
+  border-radius: 10px;
+}
+.tech_list{
+  color: #7b85a2;
+  padding:5px 0 0 20px;
+}
+.about_me h1{
+padding-bottom: 18px;
+}
+.contact{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.para{
+  width: 50%;
+  text-align: center;
+  color:#727d9a;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.8rem;
+}
+.foot{
+  color:#727d9a;
+  padding: 20px 0;
+  font-size: 14px;
+}
+.foot svg{
+  width: 20px;
+  color: #dfd2d2;
+  margin: 0 10px 0 10px;
+}
+.foot{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.main{
+  display: flex;
+}
+.homelinks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.homelinks svg{
+  width: 25px;
+  color: #dfd2d2;
+  margin: 0 10px 0 10px;
+  border-radius: 6px;
+  padding: 0.5px;
+}
+.homelinks svg:hover{
+  background-color: #dfd2d2 ;
+  color:  #0a192f;
+  transition: 0.5s;
+}
+.vl{
+  width: 2px;
+  background-color: #fff;
+  height: 100px;
+}
+.projects{
+  width: 70%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.project_cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+.ph{
+  margin-bottom: 70px;
+  width: 100%;
+  text-align: center;
+}
+.pd{
+  color: #727d9a;
+}
+.pcard{
+  background-color: #112240;
+  width: 260px;
+  height: 275px;
+  padding: 3px 3px 15px 3px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+.pcard:hover{
+  box-shadow: rgba(240, 46, 170, 0.4) 2px 2px 2px 2px, rgba(240, 46, 170, 0.3) 4px 4px 4px 4px, rgba(240, 46, 170, 0.2) 4px 4px 4px 4px, rgba(240, 46, 170, 0.1) 8px 8px 8px 8px, rgba(240, 46, 170, 0.05) 8px 8px 8px 8px;
+  transition: 0.4s;
+}
+
+.pdetails{
+  color:#727d9a ;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5px;
+}
+.ptitle{
+  width: 200px;
+}
+.ptitle h2{
+  font-family: 'Telex', sans-serif;
+  color: white;
+  font-weight:400;
+  font-size: 20px;
+}
+.ptitle p{
+  font-size: 13px;
+  padding-left: 5px;
+  color: rgb(167, 162, 162);
+}
+.plinks{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 15px;
+}
+.plinks a svg{
+  width: 20px;
+  color: #dfd2d2;
+  margin: 0 10px 0 10px;
+  border-radius: 2px;
+  padding: 0.5px;
+  text-decoration: none;
+}
+.plinks a svg:hover{
+  background-color: #dfd2d2 ;
+  color:  #0a192f;
+  transition: 0.5s;
+}
+.pimage img{
+  width: 260px;
+  border-radius: 10px;
+}
+.show_btn{
+  width: 100%;
+  text-align: center;
+}
+.show_btn button{
+  width: 150px;
+  height: 40px;
+  color: #64ffda;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight:bold;
+  border: 2px solid;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.show_btn button:hover{
+  color:  #0a192f;
+  background-color: #64ffda;
+  border: 2px solid #64ffda;
+  transition: 0.5s;
+}
+
+
+
+
+.svg-frame {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-frame svg {
+  position: absolute;
+  transition: .5s;
+  z-index: calc(1 - (0.2 * var(--j)));
+  transform-origin: center;
+  width: 344px;
+  height: 344px;
+  fill: none;
+}
+
+.svg-frame:hover svg {
+  transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
+}
+
+.svg-frame svg #center {
+  transition: .5s;
+  transform-origin: center;
+}
+
+.svg-frame:hover svg #center {
+  transform: rotate(-30deg) translateX(45px) translateY(-3px);
+}
+
+#out2 {
+  animation: rotate16 7s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+#out3 {
+  animation: rotate16 3s ease-in-out infinite alternate;
+  transform-origin: center;
+  stroke: #ff0;
+}
+
+#inner3,
+#inner1 {
+  animation: rotate16 4s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+#center1 {
+  fill: #ff0;
+  animation: rotate16 2s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes rotate16 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
