@@ -17,13 +17,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  
 }
 .nav{
   position: fixed;
   top: 0;
+  left:0;
   width: 100%;
   background-color:#0a192fed ;
+  
 }
 
 .navbar{
@@ -34,6 +36,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: auto;
+  
 }
 .icon{
   width: 50px;
@@ -221,7 +224,7 @@ padding-bottom: 18px;
 .projects{
   width: 66rem;
   margin: auto;
-  padding: 7rem 5rem;
+  padding: 7rem 0;
   display: flex;
   flex-direction: column;
 }
@@ -477,9 +480,13 @@ label #cancel{
 @media only screen and (max-width: 1100px) {
 .main{
  width: 90%; 
+ 
 }
 .name h1{
   font-size: 3.5rem !important;
+}
+.about{
+  padding: 7rem 0;
 }
 .paragraph{
   width: 55%;
@@ -492,6 +499,9 @@ label #cancel{
   margin: auto;
   padding: 3rem 0;
 }
+.main{
+  padding: 10rem 0; 
+ }
 
 }
 
@@ -504,6 +514,10 @@ label #cancel{
     flex-direction: column;
     
   }
+  .contact{
+    height: 80vh;
+  }
+
 }
 
 /* ..................................Small Screen................................ */
@@ -512,6 +526,12 @@ label #cancel{
     .lists{
       display: none;
     }
+    .para{
+      width: 90%;
+    }
+    .main{
+      padding: 6.5rem 0; 
+     }
     .sm-lists{
       display:inline;
     }
@@ -528,13 +548,9 @@ label #cancel{
       margin-top: 10px;
       line-height: 20px;
     }
-    .main{
-      padding: 6.5rem 0; 
-     }
+    
      
-     .about{
-      padding: 7rem 0;
-    }
+     
     .navbar{
       width: 90%;
     }

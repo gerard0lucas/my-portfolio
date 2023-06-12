@@ -5,13 +5,12 @@ const Projects = () => {
   const [count,setcount] = useState(6)
   const handleclick = ()=>{
     setcount(count+3)
-    console.log(count);
   }
   const handleless = ()=>{
     setcount(6)
   }
 
-  const data = [
+  const dat = [
     {
       id: 1,
       img: 'https://screenshot-proxy.netlify.app/f_avif,w_336/https://d33wubrfki0l68.cloudfront.net/646bcb29e8fc6d2d60d95046/screenshot_2023-05-22-20-06-21-0000.png',
@@ -60,25 +59,25 @@ const Projects = () => {
       github: "https://effortless-cocada-1fba65.netlify.app",
       link: "https://sparkling-squirrel-a464b8.netlify.app",
     },
-    // {
-    //   id: 7,
-    //   img: pic1,
-    //   name: "Workout Buddy App",
-    //   desc: "Built Using node.js, Express.js, MongoDB, React.js and ReactContext for state management",
-    //   github: "https://github.com/gerard0lucas/workout_buddy_frontend",
-    //   link: "https://sparkling-squirrel-a464b8.netlify.app",
-    // },
-    // {
-    //   id: 8,
-    //   img: pic2,
-    //   name: "Workout Buddy App",
-    //   desc: "Built Using node.js, Express.js, MongoDB, React.js and ReactContext for state management",
-    //   github: "https://github.com/gerard0lucas/workout_buddy_frontend",
-    //   link: "https://sparkling-squirrel-a464b8.netlify.app",
-    // },
+    {
+      id: 7,
+      img: 'https://screenshot-proxy.netlify.app/f_avif,w_336/https://d33wubrfki0l68.cloudfront.net/648393888de2fe0008dbf16d/screenshot_2023-06-09-21-03-34-0000.png',
+      name: "Workout Buddy App",
+      desc: "Built Using node.js, Express.js, MongoDB, React.js and ReactContext for state management",
+      github: "https://github.com/gerard0lucas/workout_buddy_frontend",
+      link: "https://sparkling-squirrel-a464b8.netlify.app",
+    },
+    {
+      id: 8,
+      img: 'https://screenshot-proxy.netlify.app/f_avif,w_336/https://d33wubrfki0l68.cloudfront.net/6482fbfc9d4ca70008a38bc2/screenshot_2023-06-09-10-16-58-0000.png',
+      name: "Ecommerse website",
+      desc: "Built Using node.js, Express.js, MongoDB, React.js and ReactContext for state management,this project is still under progress",
+      github: "https://github.com/gerard0lucas/ecom-client",
+      link: "https://unique-trifle-00202c.netlify.app",
+    },
     // {
     //   id: 9,
-    //   img: pic3,
+    //   img: 'https://screenshot-proxy.netlify.app/f_avif,w_336/https://d33wubrfki0l68.cloudfront.net/646d360ba245200008816954/screenshot_2023-05-23-21-54-30-0000.png',
     //   name: "Workout Buddy App",
     //   desc: "Built Using node.js, Express.js, MongoDB, React.js and ReactContext for state management",
     //   github: "https://github.com/gerard0lucas/workout_buddy_frontend",
@@ -86,7 +85,7 @@ const Projects = () => {
     // },
     // {
     //   id: 10,
-    //   img: pic4,
+    //   img: 'https://screenshot-proxy.netlify.app/f_avif,w_336/https://d33wubrfki0l68.cloudfront.net/646d360ba245200008816954/screenshot_2023-05-23-21-54-30-0000.png',
     //   name: "Workout Buddy App",
     //   desc: "Built Using node.js, Express.js, MongoDB, React.js and ReactContext for state management",
     //   github: "https://github.com/gerard0lucas/workout_buddy_frontend",
@@ -94,7 +93,7 @@ const Projects = () => {
     // },
     // {
     //   id: 11,
-    //   img: pic6,
+    //   img: 'https://screenshot-proxy.netlify.app/f_avif,w_336/https://d33wubrfki0l68.cloudfront.net/646d360ba245200008816954/screenshot_2023-05-23-21-54-30-0000.png',
     //   name: "Workout Buddy App",
     //   desc: "Built Using node.js, Express.js, MongoDB, React.js and ReactContext for state management",
     //   github: "https://github.com/gerard0lucas/workout_buddy_frontend",
@@ -102,7 +101,7 @@ const Projects = () => {
     // },
     // {
     //   id: 12,
-    //   img: pic6,
+    //   img: 'https://screenshot-proxy.netlify.app/f_avif,w_336/https://d33wubrfki0l68.cloudfront.net/646d360ba245200008816954/screenshot_2023-05-23-21-54-30-0000.png',
     //   name: "Workout Buddy App",
     //   desc: "Built Using node.js, Express.js, MongoDB, React.js and ReactContext for state management",
     //   github: "https://github.com/gerard0lucas/workout_buddy_frontend",
@@ -110,7 +109,9 @@ const Projects = () => {
     // },
   ];
   
-let max = count === data.length;
+  let data = dat.toReversed()
+let max = count >= data.length ;
+
   
 
   return (
