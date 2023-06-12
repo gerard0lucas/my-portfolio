@@ -11,9 +11,9 @@ const Home = () => {
         </div>
         <div className="paragraph">
           <p>
-            I’m a software engineer specializing in building (and occasionally
-            designing) exceptional digital experiences. Currently, I’m focused
-            on building accessible, human-centered products at Upstatement
+            I’m a self-motivated full stack web developer specializing in building Web applications 
+            . Currently, I’m focused
+            on building an fully Functional Ecommerse Website with MERN stack.
           </p>
         </div>
         <div className="btn">

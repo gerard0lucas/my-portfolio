@@ -14,6 +14,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #0a192f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .nav{
   position: fixed;
@@ -72,9 +76,9 @@ body {
 }
 .main{
   display: flex;
-  width: 70%;
+  width: 66rem;
   margin: auto;
-  height: 100vh;
+  padding: 7rem 5rem;
 }
 .Home{
   
@@ -87,7 +91,7 @@ body {
   color: #64ffda;
   font-size: 18px;
 }
-.name.name h1:first-child{
+.name h1:first-child{
   color: #ccd6f6;
   font-size: 4.3rem;
 }
@@ -124,12 +128,13 @@ body {
   transition: 0.5s;
 }
 .about{
-  width: 65%;
+  width: 66rem;
   margin: auto;
-  height: 85vh;
+  padding: 7rem 5rem;
   display: flex;
   align-items: center;
   gap: 50px;
+  background-size: cover;
 }  
 .about h1,.projects h1{
   color: #ccd6f6;
@@ -214,12 +219,11 @@ padding-bottom: 18px;
   height: 100px;
 }
 .projects{
-  width: 70%;
-  margin: 100px auto;
+  width: 66rem;
+  margin: auto;
+  padding: 7rem 5rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
 }
 
 .project_cards{
@@ -230,7 +234,6 @@ padding-bottom: 18px;
 }
 .ph{
   margin-bottom: 70px;
-  width: 100%;
   text-align: center;
 }
 .pd{
@@ -267,7 +270,7 @@ padding-bottom: 18px;
 }
 .ptitle p{
   font-size: 13px;
-  padding-left: 5px;
+  margin-top: 2px;
   color: rgb(167, 162, 162);
 }
 .plinks{
@@ -374,9 +377,166 @@ padding-bottom: 18px;
   transform-origin: center;
 }
 
+.sm-lists{
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -310px;
+  width: 310px;
+  height: 100%;
+  background: #042331;
+  transition: all .5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #cancel{
+  position: absolute;
+  
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+ 
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: -165px;
+  margin-left: 115px;
+  top: 15px;
+  font-size: 30px;
+  color: #ffffff;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+#check:checked ~ section{
+  margin-left: 250px;
+}
+
+
+
+
+
+
+
+
+
+
 @keyframes rotate16 {
   to {
     transform: rotate(360deg);
   }
 }
 
+
+@media only screen and (max-width: 1100px) {
+.main{
+ width: 90%; 
+}
+.name h1{
+  font-size: 3.5rem !important;
+}
+.paragraph{
+  width: 55%;
+}
+.about{
+  width: 90%;
+}
+.projects{
+  width: 90%;
+  margin: auto;
+  padding: 3rem 0;
+}
+
+}
+
+@media only screen and (max-width: 900px) {
+  .paragraph{
+    width: 70%;
+    font-size: 20px;
+  }
+  .about{
+    flex-direction: column;
+    
+  }
+}
+
+/* ..................................Small Screen................................ */
+@media only screen and (max-width: 600px) {
+  body {
+    .lists{
+      display: none;
+    }
+    .sm-lists{
+      display:inline;
+    }
+    .name h1{
+      font-size: 2.4rem !important;
+      
+    }
+    .name{
+      margin-top: 10px;
+    }
+    .paragraph{
+      width: 90%;
+      font-size: 15px;
+      margin-top: 10px;
+      line-height: 20px;
+    }
+    .main{
+      padding: 6.5rem 0; 
+     }
+     
+     .about{
+      padding: 7rem 0;
+    }
+    .navbar{
+      width: 90%;
+    }
+  }
+}
