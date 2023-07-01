@@ -1,7 +1,7 @@
 import pic from "../assects/mypic.jpeg"
 const aboutme = () => {
   return (
-    <div className="about">
+    <div className="about" id="about">
       {/* .............................Details ............................... */}
       <div className="about_me">
         <h1>About Me</h1>

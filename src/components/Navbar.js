@@ -1,3 +1,4 @@
+import {Link}from 'react-scroll';
 const logos = require("../assects/Sharingan.png");
 const Navbar = () => {
   const handleClick = () => {
@@ -11,10 +12,10 @@ const Navbar = () => {
           <img className="icon" src={logos} alt="" />
         </div>
         <div className="lists">
-          <div className="list">One</div>
-          <div className="list">two</div>
-          <div className="list">three</div>
-          <div className="list">four</div>
+          <div className="list"><Link to="hero" spy={true} smooth={true} offset={50} duration={500}>Home</Link></div>
+          <div className="list"><Link to="about" spy={true} smooth={true} offset={50} duration={500}>About</Link></div>
+          <div className="list"><Link to="projects" spy={true} smooth={true} offset={50} duration={500}>Projects</Link></div>
+          <div className="list"><Link to="contact" spy={true} smooth={true} offset={50} duration={500}>Contact</Link></div>
           <button onClick={handleClick}>Resume</button>
         </div>
         <div className="sm-lists">
@@ -25,50 +26,40 @@ const Navbar = () => {
               <i className="fas fa-times" id="cancel" />
             </label>
             <div className="sidebar">
-              <header>My App</header>
+              <header>Gerard Lucas</header>
               <ul>
+               
                 <li>
-                  <a href="#">
-                    <i className="fas fa-qrcode" />
-                    Dashboard
-                  </a>
+                  <Link to="hero" spy={true} smooth={true} offset={50} duration={500} >
+                    <i class="fa-solid fa-house-user"/>
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="fas fa-link" />
-                    Shortcuts
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fas fa-stream" />
-                    Overview
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fas fa-calendar-week" />
-                    Events
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
+                  <Link to="about" spy={true} smooth={true} offset={50} duration={500}>
                     <i className="far fa-question-circle" />
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link to="projects" spy={true} smooth={true} offset={50} duration={500}>
                     <i className="fas fa-sliders-h" />
-                    Services
-                  </a>
+                    Projects
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link to="contact" spy={true} smooth={true} offset={50} duration={500}>
                     <i className="far fa-envelope" />
                     Contact
-                  </a>
+                  </Link>
                 </li>
+                <li>
+                  <Link to="contact" spy={true} smooth={true} offset={50} duration={500} onClick={handleClick}>
+                  <i class="fa-solid fa-file" />
+                  Resume
+                  </Link>
+                </li>
+                
               </ul>
             </div>
             <section />

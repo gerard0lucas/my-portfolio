@@ -115,7 +115,7 @@ let max = count >= data.length ;
   
 
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <div className="ph">
         <h1>My Projects</h1>
         <p className="pd">Some Things I’ve Built</p>
